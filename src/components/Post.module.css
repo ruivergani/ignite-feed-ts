@@ -1,0 +1,122 @@
+.post{
+    background: var(--gray-800);
+    border-radius: 8px;
+    padding: 2.5rem;
+}
+.post > header{ /* pega a header apenas que esta dentro do post */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.post > header time{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 160%;
+}
+.author{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+.authorInfo{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.authorInfo strong{
+    color: #E1E1E6;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 160%;
+}
+.authorInfo span{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+}
+.post + .post{ /* estilizar todo post que antes dele tenha outro post */
+    margin-top: 2rem;
+
+}
+.content{
+    line-height: 1.6;
+    color: var(--gray-300);
+    margin-top: 1.5rem;
+}
+.content p{
+    margin-top: 1rem;
+}
+.content a{
+    margin-top: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--green-500);
+    transition: color .1s;
+}
+.content a:hover{
+    color: var(--green-300);
+}
+.commentForm{
+    width: 100%;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-600);
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.commentForm > strong{
+    line-height: 1.6;
+    color: var(--gray-100);
+}
+.commentForm > textarea{
+    border-radius: 8px;
+    border: 1px solid var(--green-300);
+    background: var(--gray-900);
+    resize: none;
+    width: 100%;
+    padding: 13px 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    height: 96px;
+    color: #C4C4CC;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+}
+.commentForm footer{
+    /* hide the button when you do not have the focus in the textarea */
+    visibility: hidden;
+    max-height: 0;
+}
+.commentForm:focus-within footer{ /* anything that has focus inside the form => apply the following rules */
+    visibility: visible;
+    max-height: none;
+}
+.commentForm footer button{
+    border-radius: 8px;
+    background: #00875F;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 24px;
+    cursor: pointer;
+    outline: 2px solid transparent;
+}
+.commentForm button:not(:disabled):hover{
+    filter: brightness(0.8);
+}
+.commentForm footer button:disabled{
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+.commentList{
+    margin-top: 2rem;
+}

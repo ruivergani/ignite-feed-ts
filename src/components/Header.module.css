@@ -1,0 +1,19 @@
+.header{
+     background-color: var(--gray-800);
+     display: flex;
+     justify-content: center;
+     padding: 1.25rem 0rem 1.2022rem 0rem;
+     align-items: center;
+}
+.header img{
+     width: 4.0052rem;
+     height: 1.875rem;
+}
+.title{
+     color: var(--gray-100);
+     font-family: 'Roboto', sans-serif;
+     font-size: 1.5991rem;
+     font-weight: 700;
+     line-height: 160%;
+}
+
