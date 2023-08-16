@@ -1,11 +1,17 @@
-/* eslint-disable react/prop-types */
 import styles from './Avatar.module.css';
 
-export function Avatar({src, hasBorder}){
+interface AvatarProps {
+    hasBorder?: boolean;
+    src?: string;
+    alt?: string; // ? => makes the property optional to the component (either use or not)
+}
+
+export function Avatar({src, hasBorder = true, alt} : AvatarProps){
     return (
         <img 
             src={src} 
             className={hasBorder ? styles.avatarWithBorder : styles.avatar}
+            alt={alt}
         />
     )
 }

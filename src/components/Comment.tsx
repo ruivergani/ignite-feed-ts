@@ -22,7 +22,7 @@ export function Comment({content, onDeleteComment} : CommentProps){
     return (
         <div className={styles.comment}>
             {/* Props to remove the border from this component */}
-            <Avatar hasBorder={false} src="https://github.com/ruivergani.png"/>
+            <Avatar hasBorder={false} src="https://github.com/ruivergani.png" alt=""/>
 
             <div className={styles.commentBox}>
                 <div className={styles.commentContent}>
