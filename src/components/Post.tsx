@@ -14,14 +14,19 @@ interface Author{
 interface Content{
     type: 'paragraph' | 'link'; // sabe os tipos e pode ser apenas 2 tipos
     content: string;
-}
-interface PostProps{ 
+} 
+export interface PostType{ // export to be used another file
+    id: number;
     author: Author; // reference for the interface above
     publishedAt: Date;
     content: Content[]; // array
 }
+interface PostProps{ 
+    post: PostType;
+}
+
 // Component Post (author, content, publishedAt)
-export function Post({author, content, publishedAt} : PostProps){ // declare a single type for the whole object (cannot declare multiple types)
+export function Post({post} : PostProps){ // declare a single type for the whole object (cannot declare multiple types)
     // Date Format (using JavaScript API)
     // const publishedDateFormatted = new Intl.DateTimeFormat('en-GB', {
     //     day: '2-digit',
@@ -31,8 +36,8 @@ export function Post({author, content, publishedAt} : PostProps){ // declare a s
     // }).format(publishedAt);
 
     // Date Format using library date-fns
-    const publishedDateFormatted = format(publishedAt, "d LLLL HH:mm");
-    const publishedDateRelativeToNow = formatDistanceToNow(publishedAt, {
+    const publishedDateFormatted = format(post.publishedAt, "d LLLL HH:mm");
+    const publishedDateRelativeToNow = formatDistanceToNow(post.publishedAt, {
         locale: enGB, // tipo de data
         addSuffix: true, // adiciona prefixo automatico
     });
@@ -69,21 +74,21 @@ export function Post({author, content, publishedAt} : PostProps){ // declare a s
             {/* Header */}
             <header>
                 <div className={styles.author}>
-                    <Avatar src={author.avatarUrl}/>
+                    <Avatar src={post.author.avatarUrl}/>
                     <div className={styles.authorInfo}>
-                        <strong>{author.name}</strong>
-                        <span>{author.role}</span>
+                        <strong>{post.author.name}</strong>
+                        <span>{post.author.role}</span>
                     </div>
                 </div>
                 {/* Date Formatted */}
-                <time title={publishedDateFormatted} dateTime={publishedAt.toISOString()}>
+                <time title={publishedDateFormatted} dateTime={post.publishedAt.toISOString()}>
                     {publishedDateRelativeToNow}
                 </time> {/* Always camelCase (even HTML attribute)*/}
             </header>
             {/* Body */}
             <div className={styles.content}>
                 {/* Run the array each line ... */}
-                {content.map(line => {
+                {post.content.map(line => {
                     if(line.type === 'paragraph'){
                         return <p key={line.content}>{line.content}</p>;
                     }else if (line.type === 'link'){

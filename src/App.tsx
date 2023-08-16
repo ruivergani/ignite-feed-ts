@@ -1,12 +1,11 @@
 import './global.css';
 import styles from './App.module.css'; // module CSS for the App class
-
 import { Header } from "./components/Header";
-import { Post } from './components/Post';
+import { Post, PostType } from './components/Post';
 import { Sidebar } from './components/Sidebar';
 
 // Posts Array
-const posts = [
+const posts: PostType[] = [
   {
     id: 1,
     author: {
@@ -52,9 +51,7 @@ function App() {
               return (
                 <Post
                   key={post.id} // identifier for unique Post (react must have)
-                  author={post.author}
-                  content={post.content}
-                  publishedAt={post.publishedAt}
+                  post = {post}
                 />
               )
             })
