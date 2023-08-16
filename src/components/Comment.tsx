@@ -1,11 +1,15 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { ThumbsUp, Trash } from 'phosphor-react';
 import styles from './Comment.module.css';
 import { Avatar } from './Avatar';
 import { useState } from 'react';
 
-export function Comment({content, onDeleteComment}){
+interface CommentProps{
+    content:string;
+    onDeleteComment: (comment: string) => void; // adicionar tipagem em uma funcao com parametro string (void porque nao retorna nada)
+}
+
+export function Comment({content, onDeleteComment} : CommentProps){
     // Estado para like management
     const [likeCount, setLikeCount] = useState(0);
 
