@@ -29,7 +29,7 @@ ___
 The page in desktop format is seen in the image below:
 \
 \
-![Screenshot 2022-10-03 at 15 37 34](https://user-images.githubusercontent.com/70537459/193604758-4b16306f-92b3-4de8-bf91-95c0f0096d1f.png)
+<img width="1920" alt="Capa" src="https://github.com/ruivergani/ignite-feed-ts/assets/70537459/4e307856-995f-47ce-a0e7-0c0e85737136">
 
 ___
 
@@ -37,14 +37,16 @@ ___
 
 The following technologies were employed in the creation of this project:
 
-- [PokeAPI](https://pokeapi.co/) the RESTful Pokémon API;
-- [GULP](https://gulpjs.com/) a toolkit to automate & enhance your workflow;
-- [Axios](https://axios-http.com/) for HTTP requests;
-- [WordPress](https://wordpress.org/) for content management purposes;
-- [SASS](https://sass-lang.com/) for CSS;
-- [AOS Animation Library](https://michalsnik.github.io/aos/) for animations using JavaScript;
-- [Swipper JS](https://swiperjs.com/) as main modern mobile touch design tool;
-- [Figma](https://www.figma.com/file/LVNssQDuZp0afhif9M4FrZ/Pok%C3%A9mon---Codeboost?type=design&node-id=54%3A296&mode=design&t=d5fUXAAzJl69TwFA-1) detailed Figma file for the project;
+- [yarn](https://vitejs.dev/)
+- [vite js](https://vitejs.dev/)
+- [react js](https://reactjs.org/)
+- [typescript][ts]
+- [react router](https://reactrouter.com/docs/en/v6/getting-started/overview)
+- [tailwindcss](https://tailwindcss.com/)
+- [phosphor-react](https://phosphoricons.com/)
+- [date-fns](https://date-fns.org/)
+- [vs code][vscode] with [editorConfig][vceditconfig] and [esLint][vceslint]
+- [Figma](https://www.figma.com/file/QngNpEvtTk7XN61PObI3Ro/Ignite-Feed?type=design&node-id=26%3A12&mode=design&t=GL7dPs6g1RYCtsB6-1) detailed Figma file for the project;
 - Responsive to all devices and screens size;
 - HTML, CSS, and JavaScript.
 
@@ -66,7 +68,7 @@ ___
 Clone the project to the desired location on your computer.
 
 ```bash
-$ git clone git@github.com:ruivergani/lp-pokemon.git
+$ git clone git@github.com:ruivergani/ignite-feed-ts.git
 ```
 ___
 
@@ -74,7 +76,7 @@ ___
 ```bash
 
 # Navigate to the directory
-$ cd lp-pokemon
+$ cd ignite-feed-ts
 
 # Install the necessary dependencies
 $ sudo yarn
@@ -90,7 +92,7 @@ $ gulp
 
 ___
 
-[Check the final result here](https://ruivergani.github.io/lp-pokemon/)
+[Check the final result here]()
 
 ___
 
