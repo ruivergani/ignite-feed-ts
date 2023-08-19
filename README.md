@@ -21,7 +21,7 @@ ___
 
 ## 💻 About
 
-Welcome to the Pokemon API Website project! This project was developed as part of the CodeBoost course, utilizing the powerful PokeAPI to efficiently filter and manage Pokemon data. With this website, you can explore a vast collection of Pokemon, their attributes, and details in an intuitive and user-friendly interface. Whether you're a Pokemon enthusiast or a developer looking to learn API integration, this project offers a great opportunity to dive into the world of Pokemon data.
+Welcome to the Ignite Feed project! This web application mirrors a social network feed's graphical interface and was developed during Rocketseat's Ignite course. The goal was to master React, Typescript, and date manipulation.
 
 ___
 
