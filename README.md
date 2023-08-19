@@ -41,23 +41,21 @@ The following technologies were employed in the creation of this project:
 - [Vite JS](https://vitejs.dev/)
 - [React JS](https://reactjs.org/)
 - [TypeScript]()
+- [CSS Modules]()
 - [Phosphor React](https://phosphoricons.com/)
 - [Date-fns](https://date-fns.org/)
 - [Visual Studio Code] with [editorConfig][vceditconfig] and [esLint][vceslint]
 - [Figma](https://www.figma.com/file/QngNpEvtTk7XN61PObI3Ro/Ignite-Feed?type=design&node-id=26%3A12&mode=design&t=GL7dPs6g1RYCtsB6-1) detailed Figma file for the project;
 - Responsive to all devices and screens size;
-- HTML, CSS, and JavaScript.
 
 ___
 
 ## Functionalities
 
-- Show all Pokemon from the API;
-- Swipper JS Slide in the hero section;
-- Filter the Pokemon by type;
-- Pop Up Modal opening all details of each Pokemon;
-- Button to load more Pokemon from API;
-- Search Pokemon from API.
+- Viewing posts.
+- View comments.
+- View Likes.
+- Add posts, comments, and likes.
   
 ___
 
@@ -77,17 +75,16 @@ ___
 $ cd ignite-feed-ts
 
 # Install the necessary dependencies
-$ sudo yarn
+$ yarn
 
-# Run the GULP command
-$ gulp
+# Run the project
+$ yarn dev
 
-# The terminal will display the local address where the application is running:
+# The terminal will display the local address where the application is running (something like this):
 
   http://localhost:3000/
 
 ```
-
 ___
 
 [Check the final result here]()
